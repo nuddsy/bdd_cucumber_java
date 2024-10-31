@@ -19,6 +19,13 @@ public class CalculatorStepDefinitions {
         calculator.push("+");
 //        throw new io.cucumber.java.PendingException();
     }
+    @When("I subtract {int} from {int}")
+    public void i_subtract_from(Integer int1, Integer int2) {
+        calculator.push(int1);
+        calculator.push(int2);
+        calculator.push("-");
+//        throw new io.cucumber.java.PendingException();
+    }
     @Then("the result is {double}")
     public void the_result_is(double expected) {
         //Write code

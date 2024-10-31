@@ -28,4 +28,28 @@ public class AdditionUnitTests {
         Number actualAnswer = calc.value();
         assertEquals(expected, actualAnswer);
     }
+    @Test
+    public void add_operator_results_in_addition(){
+        int a = 2;
+        int b = 4;
+        Number expected = 6.0;
+        Calculator calc = new Calculator();
+        calc.push(a);
+        calc.push(b);
+        calc.push("+");
+        Number actualAnswer = calc.value();
+        assertEquals(expected, actualAnswer);
+    }
+    @Test
+    public void unknown_operator_results_in_addition(){
+        int a = 2;
+        int b = 4;
+        Number expected = 6.0;
+        Calculator calc = new Calculator();
+        calc.push(a);
+        calc.push(b);
+        calc.push("?");
+        Number actualAnswer = calc.value();
+        assertEquals(expected, actualAnswer);
+    }
 }
