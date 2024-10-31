@@ -7,12 +7,25 @@ public class AdditionUnitTests {
     public void add_int_1_and_int_2_returns_3(){
         int a = 1;
         int b = 2;
-        int expected = 3;
+        Number expected = 3.0;
         Calculator calc = new Calculator();
         calc.push(a);
         calc.push(b);
         calc.push("+");
-        int actualAnswer = calc.value();
+        Number actualAnswer = calc.value();
+        assertEquals(expected, actualAnswer);
+    }
+
+    @Test
+    public void add_int_2_and_int_2_returns_4(){
+        int a = 2;
+        int b = 2;
+        Number expected = 4.0;
+        Calculator calc = new Calculator();
+        calc.push(a);
+        calc.push(b);
+        calc.push("+");
+        Number actualAnswer = calc.value();
         assertEquals(expected, actualAnswer);
     }
 }

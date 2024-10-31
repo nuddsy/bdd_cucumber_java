@@ -18,4 +18,8 @@ public class Calculator {
             stack.add((Number) arg);
         }
     }
+
+    public Number value() {
+        return stack.getLast();
+    }
 }
